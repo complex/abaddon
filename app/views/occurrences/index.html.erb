@@ -1,0 +1,35 @@
+<nav>
+  <ul>
+    <li><%= link_to "Events", events_path %></li>
+    <li class='current'>
+      <%= link_to @event.title, event_occurrences_path(@event) %>
+      <%= link_to "Edit", edit_event_path(@event), class: 'action' %>
+    </li>
+  </ul>
+</nav>
+
+<main>
+
+  <% if @occurrences.present? %>
+    <ol>
+
+      <% for occurrence in @occurrences do %>
+        <li>
+          <%= link_to "#{ occurrence.title } — #{ time_ago occurrence.created_at }", event_occurrence_path(@event, occurrence) %>
+          <%= link_to "Edit", edit_event_occurrence_path(@event, occurrence), class: 'action' %>
+        </li>
+      <% end %>
+
+    </ol>
+  <% end %>
+
+  <%= form_for @occurrence, url: event_occurrences_path(@event) do |form| %>
+    <%= render 'shared/errors', object: @occurrence %>
+    <%= form.label :latitude, "Latitude" %>
+    <%= form.text_field :latitude %>
+    <%= form.label :longitude, "Longitude" %>
+    <%= form.text_field :longitude %>
+    <%= form.submit "Check" %>
+  <% end %>
+
+</main>

@@ -1,0 +1,18 @@
+<nav>
+  <ul>
+    <li><%= link_to "Events", events_path %></li>
+    <li><%= link_to @event.title, event_occurrences_path(@event) %></li>
+    <li class='current'>
+      <%= link_to @occurrence.title, event_occurrence_path(@event, @occurrence) %>
+      <%= link_to "Edit", edit_event_occurrence_path(@event, @occurrence), class: 'action' %>
+    </li>
+  </ul>
+</nav>
+
+<main>
+
+  <% if @occurrence.location? %>
+    <p><%= @occurrence.latitude %>,<%= @occurrence.longitude %></p>
+  <% end %>
+
+</main>

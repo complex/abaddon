@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: abaddon_development
+
+test:
+  adapter: postgresql
+  database: abaddon_test

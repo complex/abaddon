@@ -1,0 +1,174 @@
+//= require normalize
+//= require_self
+//= require_tree .
+
+@import 'colors';
+
+@font-face {
+  font-family: "Symbolset";
+  src: url('/fonts/symbolset.eot');
+  src: url('/fonts/symbolset.eot?#iefix') format('embedded-opentype'), url('/fonts/symbolset.woff') format('woff'), url('/fonts/symbolset.ttf') format('truetype'), url('/fonts/symbolset.svg#Symbolset') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'helvetica neue', 'arial', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: $primary-text-color;
+  background: $primary-background-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+  color: $secondary-text-color;
+}
+
+p {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-highlight-color;
+  border-bottom: solid 0.1em $primary-highlight-color;
+
+  &.action {
+    position: absolute;
+    top: 50%;
+    left: -4rem;
+    margin-top: -1.6rem;
+    padding: 1rem;
+    font-family: 'symbolset';
+    font-size: 1rem;
+    color: $tertiary-highlight-color;
+    border: none;
+
+    &.current {
+      color: $primary-text-color;
+    }
+
+  }
+
+}
+
+form {
+  margin: 2rem 0 0 -3rem;
+
+  &.button_to,
+  &:first-child {
+    margin-top: 1em;
+  }
+
+}
+
+label {
+  display: block;
+  padding: 0.5em 1em 0.5em 1em;
+  color: $secondary-highlight-color;
+  background: $tertiary-background-color;
+  border-bottom: solid 0.15em $primary-background-color
+}
+
+input[type=text],
+input[type=submit] {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+input[type=text] {
+  margin: 0 0 1em 0;
+  padding: 1em;
+  font-weight: 700;
+  background: $tertiary-background-color;
+
+  &:focus {
+    box-shadow: inset 0 -0.15em 0 0 $tertiary-highlight-color;
+  }
+
+}
+
+input[type=submit] {
+  box-sizing: border-box;
+  padding: 0.95em 0 0.8em 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'symbolset';
+//  font-weight: 700;
+  color: $secondary-highlight-color;
+  background: none;
+  border: solid 0.15em $secondary-highlight-color;
+  border-radius: 0.1em;
+}
+
+.button_to input[type=submit] {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: $primary-highlight-color;
+  border-color: $primary-highlight-color;
+}
+
+nav {
+  padding: 1rem 2rem 1rem 5rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  border-bottom: solid 0.15em $secondary-background-color;
+
+  a {
+    border-bottom-width: 0.15em;
+  }
+
+  ul {
+    list-style: none;
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  li {
+    position: relative;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+
+    &.current {
+      font-size: 3em;
+      font-weight: 100;
+
+      a:first-child {
+        border: none;
+        color: inherit;
+      }
+
+    }
+
+  }
+
+}
+
+main {
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 2rem 2rem 2rem 5rem;
+}
+
+@media screen and (max-width: 40rem) {
+
+  nav li.current {
+    font-size: 2em;
+  }
+
+}

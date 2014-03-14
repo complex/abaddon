@@ -1,0 +1,26 @@
+<nav>
+  <ul>
+    <li><%= link_to "Events", events_path %></li>
+    <li><%= link_to @event.title, event_occurrences_path(@event) %></li>
+    <li><%= link_to @occurrence.title, event_occurrence_path(@event, @occurrence) %></li>
+    <li class='current'>
+      <%= link_to "Edit", edit_event_occurrence_path(@event, @occurrence) %>
+      <%= link_to "Edit", edit_event_occurrence_path(@event, @occurrence), class: 'current action' %>
+    </li>
+  </ul>
+</nav>
+
+<main>
+
+  <%= form_for @occurrence, url: event_occurrence_path(@event, @occurrence) do |form| %>
+    <%= render 'shared/errors', object: @occurrence %>
+    <%= form.label :latitude, "Latitude" %>
+    <%= form.text_field :latitude %>
+    <%= form.label :longitude, "Longitude" %>
+    <%= form.text_field :longitude %>
+    <%= form.submit "Check" %>
+  <% end %>
+
+  <%= button_to "Trash", event_occurrence_path(@event, @occurrence), method: :delete, data: { confirm: "This occurrence will be permanently deleted." } %>
+
+</main>

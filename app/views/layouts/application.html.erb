@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Abaddon</title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
+    <meta content='initial-scale = 1.0' name='viewport'>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body class='<%= params[:controller] %>' id='<%= params[:action] %>'>
+    <%= yield %>
+  </body>
+
+</html>
