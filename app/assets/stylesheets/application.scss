@@ -70,10 +70,10 @@ form {
 
 label {
   display: block;
-  padding: 0.5em 1em 0.5em 1em;
+  padding: 1em 1em 0 1em;
   color: $secondary-highlight-color;
   background: $tertiary-background-color;
-  border-bottom: solid 0.15em $primary-background-color
+//  border-bottom: solid 0.15em $primary-background-color
 }
 
 input[type=text],
@@ -90,7 +90,7 @@ input[type=submit] {
 
 input[type=text] {
   margin: 0 0 1em 0;
-  padding: 1em;
+  padding: 0.5em 1em 1em 1em;
   font-weight: 700;
   background: $tertiary-background-color;
 
@@ -102,7 +102,7 @@ input[type=text] {
 
 input[type=submit] {
   box-sizing: border-box;
-  padding: 0.95em 0 0.8em 0;
+  padding: 1em 0 0.8em 0;
   text-align: center;
   text-transform: uppercase;
   font-family: 'symbolset';
