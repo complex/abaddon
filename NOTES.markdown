@@ -69,6 +69,24 @@ private. I might like to have a public record of some events.
 
 
 
+ADDITIONAL OCCURRENCE DATA
+==========================
+
+It could be interesting to (optionally) capture more data on
+occurrence creation.
+
+  - Notes
+    Freeform. Not useful for data analysis but could be interesting
+    to read later.
+
+  - Tags
+    Semi-structured. Maybe useful for data analysis.
+
+  - Contextual data
+    This would require events to be categorized in some way(s).
+
+
+
 MISCELLANEOUS
 =============
 
