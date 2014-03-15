@@ -54,6 +54,11 @@ through the occurrence creation process. Levels:
 A page listing the most recent events could be neat. It could say "39
 minutes ago, I walked Dansy."
 
+It would be nice to have sorting options on the events page.
+
+  - By last occurrence time.
+  - By occurrences count.
+
 
 
 PROFILES
@@ -61,3 +66,20 @@ PROFILES
 
 I should be able to create an account and set events to public or
 private. I might like to have a public record of some events.
+
+
+
+MISCELLANEOUS
+=============
+
+Occurrence creation needs to be reworked. It should be at the top and
+it shouldn't have any displayed text fields.
+
+Should I call occurrence creation something else? "Check in" is
+lame and a bad metaphor. "I did this" sounds silly. "This happened"?
+"Record occurrence"? "Record" by itself?
+
+Should the event creation form stay at the bottom? Maybe it should be
+at the top but hidden by default?
+
+Try not showing a count if the count is zero.
