@@ -17,6 +17,30 @@
       border-top: solid 0.1em $secondary-background-color;
     }
 
+    p {
+      margin: 0;
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 40rem) {
+
+  .occurrences#index {
+
+    ol {
+
+      span.separator {
+        display: none;
+      }
+
+      span.time {
+        display: block;
+      }
+
+    }
+
   }
 
 }

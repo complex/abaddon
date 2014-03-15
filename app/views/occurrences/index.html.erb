@@ -15,7 +15,11 @@
 
       <% for occurrence in @occurrences do %>
         <li>
-          <%= link_to "#{ occurrence.title } — #{ time_ago occurrence.created_at }", event_occurrence_path(@event, occurrence) %>
+          <p>
+            <span class='title'><%= link_to occurrence.title, event_occurrence_path(@event, occurrence) %></span>
+            <span class='separator'>—</span>
+            <span class='time'><%= time_ago occurrence.created_at %></span>
+          </p>
           <%= link_to "Edit", edit_event_occurrence_path(@event, occurrence), class: 'action' %>
         </li>
       <% end %>
