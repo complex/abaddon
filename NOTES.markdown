@@ -53,3 +53,11 @@ through the occurrence creation process. Levels:
 
 A page listing the most recent events could be neat. It could say "39
 minutes ago, I walked Dansy."
+
+
+
+PROFILES
+========
+
+I should be able to create an account and set events to public or
+private. I might like to have a public record of some events.
