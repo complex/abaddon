@@ -15,7 +15,7 @@
       <% for event in @events do %>
         <li>
           <p>
-            <span class='title'><%= link_to event.title.capitalize, event_occurrences_path(event) %></span>
+            <span class='title'><%= link_to event.title.upcase_first_character, event_occurrences_path(event) %></span>
             <% if event.occurrences.present? %>
               <span class='time'><%= time_ago event.occurrences.first.created_at %></span>
             <% end %>
