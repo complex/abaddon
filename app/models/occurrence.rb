@@ -6,6 +6,8 @@ class Occurrence < ActiveRecord::Base
 
   before_create :generate_token
 
+  default_scope { order 'created_at DESC' }
+
   def to_param
     [ self.id, self.created_at.strftime('%Y-%m-%d-%H-%M-%S') ].join '-'
   end
