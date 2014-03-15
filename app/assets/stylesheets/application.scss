@@ -43,9 +43,9 @@ a {
   &.action {
     position: absolute;
     top: 50%;
-    left: -4rem;
-    margin-top: -1.6rem;
-    padding: 1rem;
+    left: -3.8rem;
+    margin-top: -1.15rem;
+    padding: 0.5em 0.8em 0.4em 0.8em;
     font-family: 'symbolset';
     font-size: 1rem;
     color: $tertiary-highlight-color;
@@ -179,7 +179,7 @@ main {
   }
 
   a.action {
-    left: -3rem;
+    left: -2.8rem;
   }
 
   main {
