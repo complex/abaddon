@@ -24,6 +24,10 @@ class Event < ActiveRecord::Base
     "#{ self.title } (#{ self.occurrences_count })"
   end
 
+  def last_occurrence_at
+    self.occurrences.first.try :created_at
+  end
+
   def generate_token
     self.token = loop do
       token = SecureRandom.hex 6

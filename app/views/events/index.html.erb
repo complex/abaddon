@@ -14,7 +14,13 @@
 
       <% for event in @events do %>
         <li>
-          <%= link_to event.title_with_count, event_occurrences_path(event) %>
+          <p>
+            <%= link_to event.title, event_occurrences_path(event) %>
+            <% if event.occurrences.present? %>
+              <%= time_ago event.occurrences.first.created_at %>
+            <% end %>
+          </p>
+          <p><%= event.occurrences_count %></p>
           <%= link_to "Edit", edit_event_path(event), class: 'action' %>
         </li>
       <% end %>
@@ -23,6 +29,7 @@
   <% end %>
 
   <%= form_for @event do |form| %>
+    <h2>Create an event</h2>
     <%= render 'shared/errors', object: @event %>
     <%= form.label :title, "Title" %>
     <%= form.text_field :title %>

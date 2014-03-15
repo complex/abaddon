@@ -24,6 +24,7 @@
   <% end %>
 
   <%= form_for @occurrence, url: event_occurrences_path(@event) do |form| %>
+    <h2>Create an occurrence</h2>
     <%= render 'shared/errors', object: @occurrence %>
     <%= form.label :latitude, "Latitude" %>
     <%= form.text_field :latitude %>

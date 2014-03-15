@@ -26,6 +26,7 @@ h3,
 h4,
 h5,
 h6 {
+  text-transform: uppercase;
   font-weight: 100;
   color: $secondary-text-color;
 }
@@ -167,8 +168,27 @@ main {
 
 @media screen and (max-width: 40rem) {
 
-  nav li.current {
-    font-size: 2em;
+  nav {
+    padding-right: 1rem;
+    padding-left: 3rem;
+
+    li.current {
+      font-size: 2em;
+    }
+
+  }
+
+  a.action {
+    left: -3rem;
+  }
+
+  main {
+    padding-right: 1rem;
+    padding-left: 3rem;
+  }
+
+  form {
+    margin-left: -2rem;
   }
 
 }
