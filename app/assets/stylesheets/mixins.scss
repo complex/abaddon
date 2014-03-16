@@ -1,0 +1,17 @@
+@mixin clear {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin split {
+  @include clear;
+  > *:last-child {
+    float: right;
+  }
+  > *:first-child {
+    float: left;
+  }
+}

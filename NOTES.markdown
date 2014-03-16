@@ -116,3 +116,5 @@ Try not showing a count if the count is zero.
 Should there be a way to create an occurrence from the events index?
 It's already somewhat cramped on a small screen. Maybe when you click
 the count it creates an occurrence. The count could transform into a check mark on hover.
+
+Split the submit button for creating occurrences into two buttons: one "add with location" and one "add without location". The first is a normal form submit button. The second is added via JS and initiates the location request process, then modifies and submits the form.
