@@ -62,3 +62,6 @@ The navigation needs to be turned into a partial.
 
 The styles for the main column need to be reworked so I don't have to
 use negative margins on other elements.
+
+The scroll down button is just scrolling to the bottom always. It should go to the event creation form.
+
