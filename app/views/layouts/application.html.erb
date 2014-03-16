@@ -11,7 +11,13 @@
   </head>
 
   <body class='<%= params[:controller] %>' id='<%= params[:action] %>'>
+
     <%= yield %>
+
+    <footer>
+      <p class='top'><%= link_to "ascend", '#' %></p>
+    </footer>
+
   </body>
 
 </html>

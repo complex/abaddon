@@ -39,7 +39,8 @@ a {
   text-decoration: none;
   color: $primary-highlight-color;
   border-bottom: solid 0.1em $primary-highlight-color;
-  -webkit-transition: all 0.5s;
+  -webkit-transition-property: color, border-color;
+  -webkit-transition-duration: 0.5s;
 
   &:hover {
     color: lighten($primary-highlight-color, 5%);
@@ -189,6 +190,31 @@ main {
   max-width: 50em;
   margin: 0 auto;
   padding: 2rem 2rem 2rem 5rem;
+}
+
+footer {
+  max-width: 50em;
+  margin: 2em auto;
+  padding: 0 2rem 2rem 2rem;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    width: 3.4em;
+    padding-top: 0.15em;
+    line-height: 3.25em;
+    font-family: 'symbolset';
+    color: $primary-background-color;
+    background: $tertiary-background-color;
+    border: none;
+    border-radius: 10em;
+
+    &:hover {
+      color: $primary-text-color;
+    }
+
+  }
+
 }
 
 @media screen and (max-width: 40rem) {

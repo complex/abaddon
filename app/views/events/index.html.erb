@@ -9,6 +9,8 @@
 
 <main>
 
+  <p class='new'><%= link_to "plus", '#new' %></p>
+
   <% if @events.present? %>
     <ol>
 
@@ -21,18 +23,18 @@
             <% end %>
           </p>
           <p class='count'><%= link_to event.occurrences_count, event_occurrences_path(event) %></p>
-          <%= link_to "Edit", edit_event_path(event), class: 'edit' %>
+          <%= link_to "edit", edit_event_path(event), class: 'edit' %>
         </li>
       <% end %>
 
     </ol>
   <% end %>
 
-  <%= form_for @event do |form| %>
+  <%= form_for @event, html: { id: 'new' } do |form| %>
     <%= render 'shared/errors', object: @event %>
     <%= form.label :title, "Title" %>
     <%= form.text_field :title %>
-    <%= form.submit "Plus" %>
+    <%= form.submit "plus" %>
   <% end %>
 
 </main>
