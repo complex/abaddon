@@ -2,7 +2,7 @@
 //= require_self
 //= require_tree .
 
-@import 'colors';
+@import 'globals';
 
 @font-face {
   font-family: "Symbolset";
@@ -217,7 +217,7 @@ footer {
 
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: $small-breakpoint) {
 
   nav {
     padding-right: 1rem;

@@ -1,5 +1,5 @@
 OCCURRENCES
-===========
+-----------
 
 Occurrences need a start time and an end time. Options when creating
 an occurrence:
@@ -16,32 +16,12 @@ an occurrence:
     This creates an occurrence with a start time but no end time. The
     user can stop ongoing occurrences manually.
 
-
-
-EVENTS
-======
-
-What is the best way to name and display events?
-
-  - Past tense ("Went to bed")
-  - Present tense ("Going to bed")
-  - Command ("Go to bed")
-
-Maybe objects and actions should be separate?
-
-  - Sleep: start, stop
-  - Work: start, stop
-  - Beer: acquire, consume
-  - Food: acquire, consume
-  - Game: acquire, start, stop
-  - Toilet: start, stop
-
-I think this way would be too complicated.
+These options will be hidden by default.
 
 
 
-IDEAS
-=====
+MISCELLANEOUS
+-------------
 
 The page background starts out dark and gets lighter as you go
 through the occurrence creation process. Levels:
@@ -59,19 +39,9 @@ It would be nice to have sorting options on the events page.
   - By last occurrence time.
   - By occurrences count.
   - By "magic" (a combination of the two). This should be default.
-
-
-
-PROFILES
-========
-
+  
 I should be able to create an account and set events to public or
 private. I might like to have a public record of some events.
-
-
-
-ADDITIONAL OCCURRENCE DATA
-==========================
 
 It could be interesting to (optionally) capture more data on
 occurrence creation.
@@ -86,35 +56,17 @@ occurrence creation.
   - Contextual data
     This would require events to be categorized in some way(s).
 
-
-
-LOCATION DATA
-=============
-
-Only request location data if the user initiates it. There should be
-a button in the occurrence creation form to get location data.
-
-Does the app remember
-
-
-
-MISCELLANEOUS
-=============
-
-Occurrence creation needs to be reworked. It should be at the top and
-it shouldn't have any displayed text fields.
-
 Should I call occurrence creation something else? "Check in" is
 lame and a bad metaphor. "I did this" sounds silly. "This happened"?
 "Record occurrence"? "Record" by itself? "+1"? "Chalk one up"?
 
-Should the event creation form stay at the bottom? Maybe it should be
-at the top but hidden by default?
-
 Try not showing a count if the count is zero.
 
-Should there be a way to create an occurrence from the events index?
-It's already somewhat cramped on a small screen. Maybe when you click
-the count it creates an occurrence. The count could transform into a check mark on hover.
+The occurrence + location button should be inserted via JS.
 
-Split the submit button for creating occurrences into two buttons: one "add with location" and one "add without location". The first is a normal form submit button. The second is added via JS and initiates the location request process, then modifies and submits the form.
+The navigation needs to be turned into a partial.
+
+Submit buttons sadly need to be replaced with fake buttons.
+
+The styles for the main column need to be reworked so I don't have to
+use negative margins on other elements.

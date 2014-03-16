@@ -1,5 +1,5 @@
 @import 'mixins';
-@import 'colors';
+@import 'globals';
 
 @-webkit-keyframes pulse {
   0% { background-color: $primary-background-color; }
@@ -51,7 +51,7 @@
 
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: $small-breakpoint) {
 
   .occurrences#index {
 
