@@ -46,7 +46,19 @@
   }
 
   .submit.button {
-    width: 48.2%;
+    width: 50%;
+
+    &:first-child {
+      border-right-width: 0.1em;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+      border-left-width: 0.1em;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
 
     span {
       opacity: 1;
@@ -95,11 +107,6 @@
         display: block;
       }
 
-    }
-
-    input[type=submit],
-    .submit.button {
-      width: 47.4%;
     }
 
   }

@@ -10,6 +10,7 @@
   src: url('/fonts/symbolset.eot?#iefix') format('embedded-opentype'), url('/fonts/symbolset.woff') format('woff'), url('/fonts/symbolset.ttf') format('truetype'), url('/fonts/symbolset.svg#Symbolset') format('svg');
   font-weight: normal;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
