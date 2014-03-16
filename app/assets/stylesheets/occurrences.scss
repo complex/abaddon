@@ -48,6 +48,7 @@
   input[type=submit],
   .submit.button {
     width: 50%;
+    text-align: center;
 
     &:first-child {
       border-right-width: 0.1em;
@@ -65,12 +66,17 @@
     span {
       opacity: 1;
       transition: opacity 0.5s;
+
+      &:first-child {
+        margin: 0 0.95em 0 0.2em;
+      }
+
     }
 
     &:after {
       content: "ellipsis";
       position: absolute;
-      margin: -0.25em 0 0 -1.25em;
+      margin: -0.25em 0 0 -1.6em;
       opacity: 0;
       font-family: 'symbolset';
       font-size: 1.6em;
