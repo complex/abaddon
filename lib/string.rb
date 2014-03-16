@@ -1,7 +1,7 @@
 class String
 
-  def upcase_first_character
-    self.sub(/^(.)/) { $1.upcase }
+  def first_character method
+    self.sub(/^(.)/) { $1.send method }
   end
 
 end

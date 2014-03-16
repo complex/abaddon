@@ -4,15 +4,15 @@ OCCURRENCES
 Occurrences need a start time and an end time. Options when creating
 an occurrence:
 
-  - MOMENT ("I just biked")
+  - MOMENT ("I just biked"):
     Start time and end time are both the current time or a user-
     configurable time.
 
-  - DURATION ("I biked for two hours")
+  - DURATION ("I biked for two hours"):
     The user selects a duration, with the end time being the current
     time or a user-configurable time.
 
-  - ONGOING ("I'm biking")
+  - ONGOING ("I'm biking"):
     This creates an occurrence with a start time but no end time. The
     user can stop ongoing occurrences manually.
 
@@ -58,6 +58,7 @@ It would be nice to have sorting options on the events page.
 
   - By last occurrence time.
   - By occurrences count.
+  - By "magic" (a combination of the two). This should be default.
 
 
 
@@ -87,6 +88,16 @@ occurrence creation.
 
 
 
+LOCATION DATA
+=============
+
+Only request location data if the user initiates it. There should be
+a button in the occurrence creation form to get location data.
+
+Does the app remember
+
+
+
 MISCELLANEOUS
 =============
 
@@ -101,3 +112,7 @@ Should the event creation form stay at the bottom? Maybe it should be
 at the top but hidden by default?
 
 Try not showing a count if the count is zero.
+
+Should there be a way to create an occurrence from the events index?
+It's already somewhat cramped on a small screen. Maybe when you click
+the count it creates an occurrence. The count could transform into a check mark on hover.

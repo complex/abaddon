@@ -15,12 +15,12 @@
       <% for event in @events do %>
         <li>
           <p>
-            <span class='title'><%= link_to event.title.upcase_first_character, event_occurrences_path(event) %></span>
+            <span class='title'><%= link_to event.title.first_character(:upcase), event_occurrences_path(event) %></span>
             <% if event.occurrences.present? %>
               <span class='time'><%= time_ago event.occurrences.first.created_at %></span>
             <% end %>
           </p>
-          <p><%= event.occurrences_count %></p>
+          <p><span class='count'><%= event.occurrences_count %></span></p>
           <%= link_to "Edit", edit_event_path(event), class: 'action' %>
         </li>
       <% end %>
