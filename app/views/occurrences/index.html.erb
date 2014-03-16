@@ -3,7 +3,7 @@
     <li><%= link_to "Events", events_path %></li>
     <li class='current'>
       <%= link_to @event.title, event_occurrences_path(@event) %>
-      <%= link_to "Edit", edit_event_path(@event), class: 'action' %>
+      <%= link_to "Edit", edit_event_path(@event), class: 'edit' %>
     </li>
   </ul>
 </nav>
@@ -20,7 +20,7 @@
             <span class='separator'>—</span>
             <span class='time'><%= time_ago occurrence.created_at %></span>
           </p>
-          <%= link_to "Edit", edit_event_occurrence_path(@event, occurrence), class: 'action' %>
+          <%= link_to "Edit", edit_event_occurrence_path(@event, occurrence), class: 'edit' %>
         </li>
       <% end %>
 
@@ -28,13 +28,12 @@
   <% end %>
 
   <%= form_for @occurrence, url: event_occurrences_path(@event) do |form| %>
-    <h2>Create an occurrence</h2>
     <%= render 'shared/errors', object: @occurrence %>
     <%= form.label :latitude, "Latitude" %>
     <%= form.text_field :latitude %>
     <%= form.label :longitude, "Longitude" %>
     <%= form.text_field :longitude %>
-    <%= form.submit "Check" %>
+    <%= form.submit "Plus" %>
   <% end %>
 
 </main>

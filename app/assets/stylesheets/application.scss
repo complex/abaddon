@@ -46,7 +46,7 @@ a {
     border-bottom-color: lighten($primary-highlight-color, 5%);
   }
 
-  &.action {
+  &.edit {
     position: absolute;
     top: 50%;
     left: -3.8rem;
@@ -177,6 +177,10 @@ nav {
 
     }
 
+    &:not(.current) {
+      line-height: 1.4em;
+    }
+
   }
 
 }
@@ -199,7 +203,7 @@ main {
 
   }
 
-  a.action {
+  a.edit {
     left: -2.8rem;
   }
 

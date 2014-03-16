@@ -5,7 +5,7 @@
     <li><%= link_to @occurrence.title, event_occurrence_path(@event, @occurrence) %></li>
     <li class='current'>
       <%= link_to "Edit", edit_event_occurrence_path(@event, @occurrence) %>
-      <%= link_to "Edit", edit_event_occurrence_path(@event, @occurrence), class: 'current action' %>
+      <%= link_to "Edit", edit_event_occurrence_path(@event, @occurrence), class: 'current edit' %>
     </li>
   </ul>
 </nav>

@@ -2,7 +2,7 @@
   <ul>
     <li class='current'>
       <%= link_to "Events", events_path %>
-      <%= link_to "Home", events_path, class: 'current action' %>
+      <%= link_to "Home", events_path, class: 'current edit' %>
     </li>
   </ul>
 </nav>
@@ -20,8 +20,8 @@
               <span class='time'><%= time_ago event.occurrences.first.created_at %></span>
             <% end %>
           </p>
-          <p><span class='count'><%= event.occurrences_count %></span></p>
-          <%= link_to "Edit", edit_event_path(event), class: 'action' %>
+          <p class='count'><%= link_to event.occurrences_count, event_occurrences_path(event) %></p>
+          <%= link_to "Edit", edit_event_path(event), class: 'edit' %>
         </li>
       <% end %>
 
@@ -29,11 +29,10 @@
   <% end %>
 
   <%= form_for @event do |form| %>
-    <h2>Create an event</h2>
     <%= render 'shared/errors', object: @event %>
     <%= form.label :title, "Title" %>
     <%= form.text_field :title %>
-    <%= form.submit "Check" %>
+    <%= form.submit "Plus" %>
   <% end %>
 
 </main>

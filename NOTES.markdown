@@ -106,7 +106,7 @@ it shouldn't have any displayed text fields.
 
 Should I call occurrence creation something else? "Check in" is
 lame and a bad metaphor. "I did this" sounds silly. "This happened"?
-"Record occurrence"? "Record" by itself?
+"Record occurrence"? "Record" by itself? "+1"? "Chalk one up"?
 
 Should the event creation form stay at the bottom? Maybe it should be
 at the top but hidden by default?
