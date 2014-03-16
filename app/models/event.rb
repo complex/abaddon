@@ -9,7 +9,7 @@ class Event < ActiveRecord::Base
   default_scope { order 'occurrences_count DESC, title ASC' }
 
   def to_param
-    [ self.id, self.slug ].join '-'
+    [ self.id, self.slug ].join '='
   end
 
   def slug

@@ -9,7 +9,7 @@ class Occurrence < ActiveRecord::Base
   default_scope { order 'created_at DESC' }
 
   def to_param
-    [ self.id, self.created_at.strftime('%Y-%m-%d-%H-%M-%S') ].join '-'
+    [ self.id, self.created_at.strftime('%Y-%m-%d-%H-%M-%S') ].join '='
   end
 
   def location?
