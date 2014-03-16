@@ -133,6 +133,12 @@ input[type=submit] {
   color: rgba(255, 255, 255, 0.7);
   background-color: $primary-highlight-color;
   border-color: $primary-highlight-color;
+  -webkit-transition: color 0.5s;
+
+  &:hover {
+    color: $secondary-text-color;
+  }
+
 }
 
 nav {
