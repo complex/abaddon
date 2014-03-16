@@ -1,4 +1,10 @@
+@import 'mixins';
 @import 'colors';
+
+@-webkit-keyframes pulse {
+  0% { background-color: $primary-background-color; }
+  50% { background-color: $secondary-background-color; }
+}
 
 .occurrences#index {
 
@@ -23,6 +29,26 @@
 
   }
 
+  form {
+    @include clear;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  div.actions {
+    @include split;
+  }
+
+  input[type=submit] {
+    float: left;
+    width: 48.2%;
+
+    &.loading {
+      -webkit-animation: pulse 1s infinite;
+    }
+
+  }
+
 }
 
 @media screen and (max-width: 40rem) {
@@ -39,6 +65,10 @@
         display: block;
       }
 
+    }
+
+    input[type=submit] {
+      width: 47.4%;
     }
 
   }

@@ -3,12 +3,24 @@
     <li><%= link_to "Events", events_path %></li>
     <li class='current'>
       <%= link_to @event.title, event_occurrences_path(@event) %>
-      <%= link_to "Edit", edit_event_path(@event), class: 'edit' %>
+      <%= link_to "edit", edit_event_path(@event), class: 'edit' %>
     </li>
   </ul>
 </nav>
 
 <main>
+
+  <%= form_for @occurrence, url: event_occurrences_path(@event) do |form| %>
+    <%= render 'shared/errors', object: @occurrence %>
+    <%= form.hidden_field :latitude %>
+    <%= form.hidden_field :longitude %>
+    <div class='actions'>
+      <%= form.submit "plus" %>
+      <%= form.submit "plus     location", class: 'location' %>
+    </div>
+  <% end %>
+
+  <!-- <p class='new'><%= link_to "Plus", '' %></p> -->
 
   <% if @occurrences.present? %>
     <ol>
@@ -20,20 +32,11 @@
             <span class='separator'>—</span>
             <span class='time'><%= time_ago occurrence.created_at %></span>
           </p>
-          <%= link_to "Edit", edit_event_occurrence_path(@event, occurrence), class: 'edit' %>
+          <%= link_to "edit", edit_event_occurrence_path(@event, occurrence), class: 'edit' %>
         </li>
       <% end %>
 
     </ol>
-  <% end %>
-
-  <%= form_for @occurrence, url: event_occurrences_path(@event) do |form| %>
-    <%= render 'shared/errors', object: @occurrence %>
-    <%= form.label :latitude, "Latitude" %>
-    <%= form.text_field :latitude %>
-    <%= form.label :longitude, "Longitude" %>
-    <%= form.text_field :longitude %>
-    <%= form.submit "Plus" %>
   <% end %>
 
 </main>

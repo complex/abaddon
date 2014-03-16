@@ -26,7 +26,7 @@
         right: 0;
         top: 50%;
         margin: -0.7em 0 0 0;
-        padding: 0 1em;
+        padding: 0 0.8em;
         line-height: 1.4rem;
         cursor: pointer;
         color: $secondary-highlight-color;
@@ -69,6 +69,29 @@
 
         }
 
+      }
+
+    }
+
+  }
+
+  p.new {
+    margin: 0 0 1rem -3rem;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      width: 3.4em;
+      padding-top: 0.25em;
+      line-height: 3.15em;
+      font-family: 'symbolset';
+      color: $secondary-highlight-color;
+      background: $secondary-background-color;
+      border: none;
+      border-radius: 10em;
+
+      &:hover {
+        color: $primary-text-color;
       }
 
     }
