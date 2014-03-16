@@ -56,17 +56,9 @@ occurrence creation.
   - Contextual data
     This would require events to be categorized in some way(s).
 
-Should I call occurrence creation something else? "Check in" is
-lame and a bad metaphor. "I did this" sounds silly. "This happened"?
-"Record occurrence"? "Record" by itself? "+1"? "Chalk one up"?
-
-Try not showing a count if the count is zero.
-
 The occurrence + location button should be inserted via JS.
 
 The navigation needs to be turned into a partial.
-
-Submit buttons sadly need to be replaced with fake buttons.
 
 The styles for the main column need to be reworked so I don't have to
 use negative margins on other elements.

@@ -14,7 +14,7 @@
     }
 
     li:not(:first-child) {
-      border-top: solid 0.1em $secondary-background-color;
+      border-top: solid 0.15em $secondary-background-color;
     }
 
     p {
@@ -30,7 +30,7 @@
         line-height: 1.4rem;
         cursor: pointer;
         color: $secondary-highlight-color;
-        background: $secondary-background-color;
+        border: solid 0.15em $secondary-background-color;
         border-radius: 2em;
 
         a,
