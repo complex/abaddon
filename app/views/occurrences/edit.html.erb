@@ -21,6 +21,6 @@
     <%= form.submit "Check" %>
   <% end %>
 
-  <%= button_to "Trash", event_occurrence_path(@event, @occurrence), method: :delete, data: { confirm: "This occurrence will be permanently deleted." } %>
+  <%= button_to "Trash", event_occurrence_path(@event, @occurrence), method: :delete, class: 'delete', data: { label: "trash", confirm: "This occurrence will be permanently deleted." } %>
 
 </main>

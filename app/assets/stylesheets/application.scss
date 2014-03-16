@@ -20,17 +20,6 @@ body {
   background: $primary-background-color;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-transform: uppercase;
-  font-weight: 100;
-  color: $secondary-text-color;
-}
-
 p {
   position: relative;
 }
@@ -39,8 +28,8 @@ a {
   text-decoration: none;
   color: $primary-highlight-color;
   border-bottom: solid 0.1em $primary-highlight-color;
-  -webkit-transition-property: color, border-color;
-  -webkit-transition-duration: 0.5s;
+  transition-property: color, border-color;
+  transition-duration: 0.5s;
 
   &:hover {
     color: lighten($primary-highlight-color, 5%);
@@ -57,7 +46,7 @@ a {
     font-size: 1rem;
     color: $tertiary-highlight-color;
     border: none;
-    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
 
     &.current,
     &:hover {
@@ -86,7 +75,9 @@ label {
 }
 
 input[type=text],
-input[type=submit] {
+input[type=submit],
+.submit.button {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
   width: 100%;
@@ -103,7 +94,7 @@ input[type=text] {
   font-weight: 700;
   background: $tertiary-background-color;
   box-shadow: inset 0 -0.15em 0 0 transparent;
-  -webkit-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
 
   &:focus {
     box-shadow: inset 0 -0.15em 0 0 $tertiary-highlight-color;
@@ -111,30 +102,40 @@ input[type=text] {
 
 }
 
-input[type=submit] {
-  box-sizing: border-box;
-  padding: 1em 0 0.8em 0;
+input[type=submit],
+.submit.button {
+  padding: 0.95em 0 1em 0;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'symbolset';
   color: $secondary-highlight-color;
   background: none;
   border: solid 0.15em $secondary-highlight-color;
   border-radius: 0.1em;
-  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 
-  &:hover,
+  &:not(.loading):hover,
   &:focus {
     color: $primary-text-color;
   }
 
 }
 
-.button_to input[type=submit] {
+input[type=submit] {
+  font-weight: 800;
+}
+
+.submit.button {
+  padding: 1em 0 0.8em 0;
+  font-family: 'symbolset';
+  cursor: pointer;
+}
+
+input.delete,
+.submit.button.delete {
   color: rgba(255, 255, 255, 0.7);
   background-color: $primary-highlight-color;
   border-color: $primary-highlight-color;
-  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 
   &:hover {
     color: $secondary-text-color;
@@ -170,6 +171,7 @@ nav {
     &.current {
       font-size: 3em;
       font-weight: 100;
+      -webkit-font-smoothing: auto;
 
       a:first-child {
         border: none;
@@ -225,6 +227,8 @@ footer {
 
     li.current {
       font-size: 2em;
+      font-weight: 200;
+      -webkit-font-smoothing: antialiased;
     }
 
   }

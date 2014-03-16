@@ -34,7 +34,7 @@
     <%= render 'shared/errors', object: @event %>
     <%= form.label :title, "Title" %>
     <%= form.text_field :title %>
-    <%= form.submit "plus" %>
+    <%= form.submit "Create", data: { label: "check" } %>
   <% end %>
 
 </main>

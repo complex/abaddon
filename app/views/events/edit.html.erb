@@ -15,9 +15,9 @@
     <%= render 'shared/errors', object: @event %>
     <%= form.label :title, "Title" %>
     <%= form.text_field :title %>
-    <%= form.submit "Check" %>
+    <%= form.submit "Save", data: { label: 'check' } %>
   <% end %>
 
-  <%= button_to "Trash", @event, method: :delete, data: { confirm: "This event will be permanently deleted." } %>
+  <%= button_to "Delete", @event, method: :delete, class: 'delete', data: { confirm: "This event will be permanently deleted.", label: "trash" } %>
 
 </main>

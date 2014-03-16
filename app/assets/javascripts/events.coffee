@@ -1,8 +1,8 @@
 $(document).ready ->
 
   $('a[href=#new]').on 'click', ->
-    $('body').animate {
-      scrollTop: document.height - window.innerHeight
+    $('html, body').animate {
+      scrollTop: $(document).height() - $(window).height()
     }, {
       duration: 500,
       complete: ->

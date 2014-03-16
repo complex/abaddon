@@ -6,6 +6,12 @@
   50% { background-color: $secondary-background-color; }
 }
 
+@-moz-keyframes pulse {
+  0% { background-color: $primary-background-color; }
+  50% { background-color: $secondary-background-color; }
+}
+
+
 .occurrences#index {
 
   ol {
@@ -39,12 +45,36 @@
     @include split;
   }
 
-  input[type=submit] {
-    float: left;
+  .submit.button {
     width: 48.2%;
+
+    span {
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+
+    &:after {
+      content: "ellipsis";
+      position: absolute;
+      margin: -0.25em 0 0 -1.25em;
+      opacity: 0;
+      font-family: 'symbolset';
+      font-size: 1.6em;
+      transition: opacity 0.5s;
+    }
 
     &.loading {
       -webkit-animation: pulse 1s infinite;
+      -moz-animation: pulse 1s infinite;
+
+      &:after {
+        opacity: 1;
+      }
+
+      span {
+        opacity: 0;
+      }
+
     }
 
   }
@@ -67,7 +97,8 @@
 
     }
 
-    input[type=submit] {
+    input[type=submit],
+    .submit.button {
       width: 47.4%;
     }
 

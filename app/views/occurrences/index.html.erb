@@ -15,8 +15,8 @@
     <%= form.hidden_field :latitude %>
     <%= form.hidden_field :longitude %>
     <div class='actions'>
-      <%= form.submit "plus" %>
-      <%= form.submit "plus     location", class: 'location' %>
+      <%= form.submit "Create", data: { label: "plus" } %>
+      <%= form.submit "With location", class: 'location', data: { label: "<span>plus     location<span>".html_safe } %>
     </div>
   <% end %>
 

@@ -2,28 +2,26 @@ $(document).ready ->
 
   if $('.occurrences#index').length
 
-    $('input.location').on 'click', ->
-      Geolocation.request {
-        start: Occurrence.start_loading,
-        end: Occurrence.end_loading,
-        success: Occurrence.fill_and_submit,
-        error: Occurrence.submit
-      }
-      return false
+    $('.location.submit.button')
+      .off('click')
+      .on 'click', ->
+        Geolocation.request {
+          start: Occurrence.start_loading,
+          end: Occurrence.end_loading,
+          success: Occurrence.fill_and_submit,
+          error: Occurrence.submit
+        }
+        return false
 
 
 
 class window.Occurrence
 
   @start_loading: ->
-    $('input.location')
-      .val('ellipsis')
-      .addClass('loading')
+    $('input.location, .submit.button.location').addClass('loading')
 
   @end_loading: ->
-    $('input.location')
-      .val('plus     location')
-      .removeClass('loading')
+    $('input.location, .submit.button.location').removeClass('loading')
 
   @fill_and_submit: (response) ->
     $('#occurrence_latitude').val response.coords.latitude
