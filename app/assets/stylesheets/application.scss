@@ -39,6 +39,12 @@ a {
   text-decoration: none;
   color: $primary-highlight-color;
   border-bottom: solid 0.1em $primary-highlight-color;
+  -webkit-transition: all 0.5s;
+
+  &:hover {
+    color: lighten($primary-highlight-color, 5%);
+    border-bottom-color: lighten($primary-highlight-color, 5%);
+  }
 
   &.action {
     position: absolute;
@@ -50,8 +56,10 @@ a {
     font-size: 1rem;
     color: $tertiary-highlight-color;
     border: none;
+    -webkit-transition: color 0.5s;
 
-    &.current {
+    &.current,
+    &:hover {
       color: $primary-text-color;
     }
 
@@ -74,7 +82,6 @@ label {
   padding: 1em 1em 0 1em;
   color: $secondary-highlight-color;
   background: $tertiary-background-color;
-//  border-bottom: solid 0.15em $primary-background-color
 }
 
 input[type=text],
@@ -94,6 +101,8 @@ input[type=text] {
   padding: 0.5em 1em 1em 1em;
   font-weight: 700;
   background: $tertiary-background-color;
+  box-shadow: inset 0 -0.15em 0 0 transparent;
+  -webkit-transition: box-shadow 0.5s;
 
   &:focus {
     box-shadow: inset 0 -0.15em 0 0 $tertiary-highlight-color;
@@ -107,11 +116,17 @@ input[type=submit] {
   text-align: center;
   text-transform: uppercase;
   font-family: 'symbolset';
-//  font-weight: 700;
   color: $secondary-highlight-color;
   background: none;
   border: solid 0.15em $secondary-highlight-color;
   border-radius: 0.1em;
+  -webkit-transition: color 0.5s;
+
+  &:hover,
+  &:focus {
+    color: $primary-text-color;
+  }
+
 }
 
 .button_to input[type=submit] {

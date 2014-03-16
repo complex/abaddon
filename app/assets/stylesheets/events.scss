@@ -30,6 +30,38 @@
         color: $secondary-highlight-color;
         background: $secondary-background-color;
         border-radius: 2em;
+
+        span,
+        &:after {
+          -webkit-transition: opacity 0.5s;
+        }
+
+        span {
+          opacity: 1;
+        }
+
+        &:after {
+          content: 'check';
+          opacity: 0;
+          position: absolute;
+          margin: 0.2em 0 0 -0.9em;
+          font-family: 'symbolset';
+          font-size: 0.8em;
+          color: $primary-text-color;
+        }
+
+        &:hover {
+
+          span {
+            opacity: 0;
+          }
+
+          &:after {
+            opacity: 1;
+          }
+
+        }
+
       }
 
     }
