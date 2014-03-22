@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'uglifier'
 gem 'jbuilder'
 gem 'pg'
+gem 'unicorn'
 
 group :development do
   gem 'pry'
