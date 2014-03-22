@@ -1,4 +1,4 @@
-worker_processes Integer(ENV['WEB_CONCURRENCY'] or 3)
+worker_processes Integer(ENV['WEB_CONCURRENCY'] || 3)
 timeout 15
 
 before_fork do |server, worker|
