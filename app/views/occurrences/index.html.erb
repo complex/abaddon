@@ -16,11 +16,9 @@
     <%= form.hidden_field :longitude %>
     <div class='actions'>
       <%= form.submit "Create", data: { label: "plus" } %>
-      <%= form.submit "With location", class: 'location', data: { label: "<span>plus</span> <span>location</span>".html_safe } %>
+      <%= form.submit "+ Location", class: 'location', data: { label: "<span>plus</span> <span>location</span>".html_safe } %>
     </div>
   <% end %>
-
-  <!-- <p class='new'><%= link_to "Plus", '' %></p> -->
 
   <% if @occurrences.present? %>
     <ol>
